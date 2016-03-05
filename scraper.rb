@@ -28,7 +28,7 @@ def scrape_list(url)
       wikiname: td[0].xpath('a[not(@class="new")]/@title').text,
       constituency: td[1].text,
       party: 'unknown',
-      term: 10,
+      term: 9,
     }
     ScraperWiki.save_sqlite([:name, :constituency, :term], data)
   end
